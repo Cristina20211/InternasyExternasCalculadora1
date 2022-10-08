@@ -1,5 +1,6 @@
 package com.example.internasyexternascalculadora
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -93,11 +94,11 @@ class MainActivity : AppCompatActivity() {
          val sumarDos=miClaseInterna1.sumarDos(5 )
         println("El resultado de la suma dos es $sumarDos")
     }
-
     fun  btnSiguiente ( Vista:View){
+        //val  btnSiguiente:Intent=Intent()
 
-        val  btnSiguiente:Intent=Intent()
-
+        val VentanaSiguiente: Intent = Intent(applicationContext,MainActivity::class.java)
+        startActivity(VentanaSiguiente)
 
     }
 

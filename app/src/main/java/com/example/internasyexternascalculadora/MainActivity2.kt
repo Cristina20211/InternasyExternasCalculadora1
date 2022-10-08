@@ -29,23 +29,10 @@ class MainActivity2 : AppCompatActivity() {
         lvlenguajes?.adapter = adaptador
 
 
-        lvlenguajes?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                tvSeleccion?.text =
-                    "La posicion del lenguaje ${lvlenguajes?.getItemAtPosition(position)} es ${posicion[position]} "
-
+        lvlenguajes?.onItemClickListener = object : AdapterView.OnItemClickListener{
+            override fun onItemClick(p0: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
+                tvSeleccion?.text="La posicion del lenguaje ${lvlenguajes?.getItemAtPosition(position)} es ${posicion[position]}"
             }
-
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("Not yet implemented")
-            }
-
         }
 
     }
